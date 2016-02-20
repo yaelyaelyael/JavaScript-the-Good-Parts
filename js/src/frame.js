@@ -7,11 +7,13 @@ game.frame = function(parameters){
     var context = parameters.context;
     var entity = parameters.entity;
     var score = parameters.score;
+    var box = parameters.box;
 
     that.update = function() {
         context.clearRect(0, 0, 1280, 1024);
         entity.update();
         entity.draw();
+        box.draw();
 
         score.increment();
         score.report();
