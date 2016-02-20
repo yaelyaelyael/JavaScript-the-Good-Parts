@@ -19,6 +19,7 @@ game.frame = function(parameters){
            box.getY() <= entity.getY() && entity.getY() < box.getY()+50) {
 
            entity = game.entityFactory({context:context}).createInvader();
+           score = game.score({element: $('div').children('span').eq(1), value: 0});
 
            }
 
