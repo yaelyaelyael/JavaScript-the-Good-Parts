@@ -15,6 +15,13 @@ game.frame = function(parameters){
         entity.draw();
         box.draw();
 
+        if(box.getX() <= entity.getX() && entity.getX() < box.getX()+50 &&
+           box.getY() <= entity.getY() && entity.getY() < box.getY()+50) {
+
+           entity = game.entityFactory({context:context}).createInvader();
+
+           }
+
         score.increment();
         score.report();
 
